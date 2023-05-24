@@ -16,7 +16,7 @@ module.exports = webpackMerge.merge(
         },
         devServer:
         {
-            host: 'local-ip',
+            host: '127.0.0.1',
             port: portFinderSync.getPort(8080),
             open: true,
             https: false,
