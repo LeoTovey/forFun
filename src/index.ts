@@ -42,7 +42,7 @@ function init() {
 
 	const geometry = new THREE.BoxGeometry(10, 10, 10);
 
-	new THREE.TextureLoader().load('./test.png', function (texture) {
+	new THREE.TextureLoader().load('./test01.jpg', function (texture) {
 
 		texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
 		texture.anisotropy = renderer.capabilities.getMaxAnisotropy();
@@ -54,7 +54,7 @@ function init() {
 		mesh = new THREE.Mesh(geometry, material);
 		scene.add(mesh);
 
-		updateUvTransform();
+		//updateUvTransform();
 
 		initGui();
 
@@ -119,12 +119,12 @@ function initGui() {
 
 	gui = new GUI();
 
-	gui.add(API, 'offsetX', 0.0, 1.0).name('offset.x').onChange(updateUvTransform);
-	gui.add(API, 'offsetY', 0.0, 1.0).name('offset.y').onChange(updateUvTransform);
-	gui.add(API, 'repeatX', 0.25, 2.0).name('repeat.x').onChange(updateUvTransform);
-	gui.add(API, 'repeatY', 0.25, 2.0).name('repeat.y').onChange(updateUvTransform);
-	gui.add(API, 'rotation', - 2.0, 2.0).name('rotation').onChange(updateUvTransform);
-	gui.add(API, 'centerX', 0.0, 1.0).name('center.x').onChange(updateUvTransform);
-	gui.add(API, 'centerY', 0.0, 1.0).name('center.y').onChange(updateUvTransform);
+	// gui.add(API, 'offsetX', 0.0, 1.0).name('offset.x').onChange(updateUvTransform);
+	// gui.add(API, 'offsetY', 0.0, 1.0).name('offset.y').onChange(updateUvTransform);
+	// gui.add(API, 'repeatX', 0.25, 2.0).name('repeat.x').onChange(updateUvTransform);
+	// gui.add(API, 'repeatY', 0.25, 2.0).name('repeat.y').onChange(updateUvTransform);
+	// gui.add(API, 'rotation', - 2.0, 2.0).name('rotation').onChange(updateUvTransform);
+	// gui.add(API, 'centerX', 0.0, 1.0).name('center.x').onChange(updateUvTransform);
+	// gui.add(API, 'centerY', 0.0, 1.0).name('center.y').onChange(updateUvTransform);
 
 }
